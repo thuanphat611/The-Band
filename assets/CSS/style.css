@@ -1,0 +1,398 @@
+/*reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /*kéo mượt hơn*/
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.text-white{
+    color: #fff !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.button {
+    padding: 12px 23px;
+    margin-bottom: 16px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.pull-right { 
+    float: right !important; 
+}
+
+/*----------------header-----------------*/
+
+.header {   
+    position: fixed;  
+    top: 0;
+    left: 0;
+    right: 0;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 46px;
+    background-color: #000;
+    z-index: 1;
+}
+
+.nav, .subnav {
+    list-style-type: none;
+}
+
+.nav{
+    display: inline-block;
+}
+
+.nav li {
+    display:inline-block;
+    position: relative;
+}
+
+.nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 22px;
+    display: block;
+}
+
+.nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.nav > li:hover {
+    background-color: #ccc ;
+}
+
+.nav li:hover a {
+    color: #000;
+}
+
+.nav li:hover .subnav {
+    display: block;
+}
+
+.subnav > li {
+    width: 100%;
+}
+
+.nav-down-icon {
+    position:absolute;
+    top :11px;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.nav .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.nav .subnav li:hover {
+    background-color: #ccc ;
+}
+
+.nav .subnav a {
+    color:#000;
+    padding-left: 16px;
+    line-height: 46px;
+}
+
+.header .search-icon {
+    width: 56px;
+    line-height: 46px;
+    font-size: 20px;
+    color:#fff;
+    padding: 0 20.5px;
+    font-size: 15px;
+}
+
+.header .search-icon:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+/*-------------------slider-------------------*/
+
+.slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background-image: url(../image/chicago.jpg);
+    background-origin: border-box;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.slider-content {
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    width: 100% ;
+    text-align: center;
+}
+
+.slider-content-heading {
+    font-weight: 100;
+    font-size: 23px;
+}
+.slider-content-text {
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+/*-------------------content--------------------*/
+
+.content {
+
+}
+
+.content-section {
+    width: 800px;
+    padding: 64px 0px 112px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .section-heading {
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+
+.content .section-sub-heading {
+    font-style: italic;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+
+.about-text {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.content .member-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 48px;
+    overflow: hidden;
+}
+
+.content .band-member {
+    float: left;
+    text-align: center;
+}
+
+.content .band-member .member-name {
+    margin-bottom: 15px;
+}
+
+.content .member-list .member-img {
+    border-radius: 4px;
+    width: 60%;
+}
+
+.tour-section {
+    background-color: #000;
+}
+
+.booking-list {
+    background-color: #fff;
+    margin-top: 40px;   
+}
+
+.booking-list .tour-ticket {
+    border-bottom: 0.8px solid #ddd;
+    padding: 8px 16px;
+    font-size: 15px;
+    color: #757575;
+}
+
+.booking-list li {
+    list-style: none;
+}
+
+.booking-list .tour-ticket .sold-out {
+    padding: 3px 8px;
+    margin-left: 16px;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: #f44336 !important;
+}
+
+.booking-list .tour-ticket .quantity {
+    background-color: #000;
+    color: #fff;
+    float: right;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-right: 16px;
+    margin-top: -2px;
+}
+
+.place-list {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    padding-bottom: 64px;
+}
+.place-item {
+    float: left;
+    width: 32%;
+}
+.place-img {
+    display: block;
+    width: 100%;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    background-color: #fff;
+    padding: 0 16px;
+    font-size: 15px;
+}
+.place-heading {
+    font-weight: bolder;
+    margin-bottom: 15px;
+    padding-top: 15px;
+}
+.place-time {
+    margin: 15px 0;
+    opacity: 0.6;
+}
+.place-content {
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+.contact-content {
+    padding-top: 30px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="fa-"] { /*i[class*="fa-"] ở đây có nghĩa là thẻ i mà trong class  */ 
+    width: 30px;                /*của nó có chứa cụm "fa-"(selector nâng cao")            */
+    display: inline-block;      /*ở đây dùng width để dãn cách icon và text thay vì margin*/
+}                               /*vì icon có chiều ngang không bằng nhau                  */
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/*trong thẻ input thêm attribute required*/
+/*input đặt type là email thì phải nhập đúng định dạng email mới cho submit*/
+
+.map-section img {
+    width: 100%;
+    filter: grayscale(50%);
+}
+
+/*--------------------footer---------------------*/
+
+.footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+.social {
+    width: 100%;
+}
+
+.footer .social-icon {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+.footer .social-icon:hover {
+    opacity: 0.3;
+    cursor: auto;
+}
+
+.footer-text {
+    color: rgba(0, 0, 0, 0.6);
+    margin: 19px;
+    font-size: 15px;
+}
+
+.footer-text a {
+    text-decoration-color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.6);
+}
